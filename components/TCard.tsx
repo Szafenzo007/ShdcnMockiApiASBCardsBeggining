@@ -26,7 +26,7 @@ const Tcard: React.FC<TcardProps> = ({ data }) => {
    const bgColor = theme === "dark" ? "bg-black" : "bg-white";
 
   return (
-    <Link href="/" className='outline-0 focus:ring-2 hover:ring-2 ring-primary transition
+    <Link href={`/client/${data.id}`} className='outline-0 focus:ring-2 hover:ring-2 ring-primary transition
     duration-300 rounded-lg'>
     <div className={`align-top flex flex-wrap transition ease-in duration-300 justify-center w-30  
     max-w-sm rounded overflow-hidden shadow-lg  hover:scale-90  ${bgColor}`}>

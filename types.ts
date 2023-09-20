@@ -8,14 +8,14 @@ export interface Product {
   id:string;
 };
 
-export interface Clients {
+export interface ClientData {
   id:string;
   createAt: Date;
   name: string ;
   DOB : Date;
   ward: string[];
   locations : string[] ;
-  images: string[];
+  images: string;
   ASB : string;
   ASBLinks : string[];
   CPW: string;
