@@ -20,9 +20,10 @@ async function getClient(ClientId) {
     
  
     <div className="w-full">
-      <div className="p-4 md:pt-8 flex flex-col md:flex-row items-center content-center max-w-6xl mx-auto md:space-x-6">
+      <div className="p-4 md:pt-8 flex flex-col md:flex-row 
+      items-center content-center max-w-6xl mx-auto md:space-x-6">
         <Image
-          src={client.images}
+          src={`${client.images}`}
           width={500}
           height={300}
           className="rounded-lg"
@@ -35,7 +36,7 @@ async function getClient(ClientId) {
           alt="xxx" // Use a meaningful alt text
         />
         <div className="p-2">
-          <h2 className="text-lg mb-3 font-bold"> Name{client.name}</h2>
+          <h2 className="text-lg mb-3 font-bold"> {client.name}</h2>
           <p className="text-lg mb-3">
             <span className="font-semibold mr-1">Description:</span>
             {client.description}

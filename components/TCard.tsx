@@ -25,6 +25,17 @@ const Tcard: React.FC<TcardProps> = ({ data }) => {
    // Determine background color based on the theme
    const bgColor = theme === "dark" ? "bg-black" : "bg-white";
 
+   const date = new Date(data.CPW)
+
+   const options: Intl.DateTimeFormatOptions = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: 'numeric'
+   };
+
+   const formattedDate = new Intl.DateTimeFormat('en-US', options).format(date);
+
   return (
     <Link href={`/client/${data.id}`} className='outline-0 focus:ring-2 hover:ring-2 ring-primary transition
     duration-300 rounded-lg'>
@@ -63,7 +74,7 @@ const Tcard: React.FC<TcardProps> = ({ data }) => {
                {/* {data.className} */}
             </p>
             <p className="text-white text-md mb-2">ASBWN: {data.name}</p>
-            <p className="text-white text-md mb-2">CPW: {data.CPW}</p>
+            <p className="text-white text-md mb-2">CPW: {formattedDate}</p>
             <p className="text-white text-md mb-2">CPN: {data.name}</p>
             <p className="text-white text-md mb-2">
               Last address: {data.category}
