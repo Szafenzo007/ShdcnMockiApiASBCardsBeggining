@@ -7,6 +7,7 @@ import { Button } from "./ui/button";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import Link from "next/link";
+import { formatDateTime } from "@/utils/formattedDate";
 
 interface TcardProps {
     data: ClientData ;
@@ -26,15 +27,7 @@ const Tcard: React.FC<TcardProps> = ({ data }) => {
    const bgColor = theme === "dark" ? "bg-black" : "bg-white";
 
    const date = new Date(data.CPW)
-
-   const options: Intl.DateTimeFormatOptions = {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-    hour: 'numeric'
-   };
-
-   const formattedDate = new Intl.DateTimeFormat('en-US', options).format(date);
+   const formattedDate =formatDateTime(date);
 
   return (
     <Link href={`/client/${data.id}`} className='outline-0 focus:ring-2 hover:ring-2 ring-primary transition

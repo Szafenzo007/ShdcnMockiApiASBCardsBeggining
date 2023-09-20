@@ -3,6 +3,8 @@
 import { ClientData } from '@/types';
 import Image from 'next/image';
 
+import { formatDateTime } from "@/utils/formattedDate";
+
 
 
 async function getClient(ClientId) {
@@ -16,6 +18,8 @@ async function getClient(ClientId) {
   export default async function MoviePage({ params }) {
     const ClientId = params.id;
     const client = await getClient(ClientId);
+    const date = new Date(client.CPW)
+   const formattedDate =formatDateTime(date);
     return (
     
  
@@ -43,7 +47,7 @@ async function getClient(ClientId) {
           </p>
           <p className="text-lg mb-3">
             <span className="font-semibold mr-1">CPW</span>
-            {client.CPW}
+            {formattedDate}
           </p>
           {/* Add more client-specific information here */}
         </div>
