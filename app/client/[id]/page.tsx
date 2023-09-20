@@ -21,15 +21,47 @@ async function getClient(ClientId) {
     const date = new Date(client.CPW)
    const formattedDate =formatDateTime(date);
     return (
+        <div className="flex flex-col 
+        md:flex-row items-center 
+         bg-gray-900/20
+        rounded-b-2xl ">
+
+<div className="
+    absolute 
+    top-0
+    left-0
+    h-screen
+    w-full
+    
+    bg-gradient-to-br
+    from-[#FEF200]
+    to-[#FE2100]
+    rounded-md
+    filter
+    blur-3xl
+    opacity-50
+    -z-50
+    ">
+
+</div>
+
+        
+        <div
+        // style={{ backgroundImage: `url(/img/hero-bg.webp)`, }}
+        className=" bg-opacity-90 bg-[url('/img/50tranbg.png')] rounded-lg relative aspect-square
+          md:aspect-[2.1/1] overflow-hidden
+        bg-cover "
+        >
     
  
-    <div className="w-full">
+    <div  className="h-full w-full flex flex-col justify-center 
+                          gap-y-8 ">
       <div className="p-4 md:pt-8 flex flex-col md:flex-row 
       items-center content-center max-w-6xl mx-auto md:space-x-6">
         <Image
           src={`${client.images}`}
-          width={500}
-          height={300}
+          width={550}
+          height={450}
           className="rounded-lg"
           style={{
             maxWidth: "100%",
@@ -39,7 +71,7 @@ async function getClient(ClientId) {
           blurDataURL="/spinner.svg"
           alt="xxx" // Use a meaningful alt text
         />
-        <div className="p-2">
+        <div className="p-2  ">
           <h2 className="text-lg mb-3 font-bold"> {client.name}</h2>
           <p className="text-lg mb-3">
             <span className="font-semibold mr-1">Description:</span>
@@ -52,6 +84,8 @@ async function getClient(ClientId) {
           {/* Add more client-specific information here */}
         </div>
       </div>
+    </div>
+    </div>
     </div>
   );
 };

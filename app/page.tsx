@@ -27,6 +27,24 @@ const HomePage: React.FC = () => {
 
   return (
     <Container>
+      <div className="
+    absolute 
+    top-0
+    left-0
+    h-screen
+    w-full
+    
+    bg-gradient-to-br
+    from-[#FEF200]
+    to-[#FE2100]
+    rounded-md
+    filter
+    blur-3xl
+    opacity-50
+    -z-50
+    ">
+
+</div>
 
     <div className="space-y-10 pb-10">
       <div className="p-4 sm:p-6 lg:p-8 rounded-lg overflow-hidden">
