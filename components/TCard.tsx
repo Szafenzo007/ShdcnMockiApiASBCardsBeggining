@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from "react";
-import { Product } from "@/types";
+import { ClientData} from "@/types";
 import { Button } from "./ui/button";
 
 import Image from "next/image";
@@ -9,7 +9,7 @@ import { useTheme } from "next-themes";
 import Link from "next/link";
 
 interface TcardProps {
-    data: Product ;
+    data: ClientData ;
 }
 
 const Tcard: React.FC<TcardProps> = ({ data }) => {
@@ -63,7 +63,7 @@ const Tcard: React.FC<TcardProps> = ({ data }) => {
                {/* {data.className} */}
             </p>
             <p className="text-white text-md mb-2">ASBWN: {data.name}</p>
-            <p className="text-white text-md mb-2">CPW: {data.name}</p>
+            <p className="text-white text-md mb-2">CPW: {data.CPW}</p>
             <p className="text-white text-md mb-2">CPN: {data.name}</p>
             <p className="text-white text-md mb-2">
               Last address: {data.category}

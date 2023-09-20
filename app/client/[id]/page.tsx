@@ -1,11 +1,13 @@
 // ClientPage.tsx
 
-import { Product } from '@/types';
+import { ClientData } from '@/types';
 import Image from 'next/image';
+
+
 
 async function getClient(ClientId) {
     const res = await fetch(
-      `https://6504321dc8869921ae24ac07.mockapi.io/products/${ClientId}`
+      `https://6504321dc8869921ae24ac07.mockapi.io/products/${ClientId}?`
     );
     return await res.json();
   }
@@ -20,7 +22,7 @@ async function getClient(ClientId) {
     <div className="w-full">
       <div className="p-4 md:pt-8 flex flex-col md:flex-row items-center content-center max-w-6xl mx-auto md:space-x-6">
         <Image
-          src={`${client.images}`}
+          src={client.images}
           width={500}
           height={300}
           className="rounded-lg"
@@ -37,6 +39,10 @@ async function getClient(ClientId) {
           <p className="text-lg mb-3">
             <span className="font-semibold mr-1">Description:</span>
             {client.description}
+          </p>
+          <p className="text-lg mb-3">
+            <span className="font-semibold mr-1">CPW</span>
+            {client.CPW}
           </p>
           {/* Add more client-specific information here */}
         </div>

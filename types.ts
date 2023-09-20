@@ -14,6 +14,8 @@ export interface ClientData {
   name: string ;
   DOB : Date;
   ward: string[];
+  category : string;
+  price: string;
   locations : string[] ;
   images: string;
   ASB : string;
