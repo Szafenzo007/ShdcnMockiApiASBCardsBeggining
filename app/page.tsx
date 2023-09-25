@@ -57,10 +57,10 @@ const HomePage: React.FC = () => {
                           items-center text-center gap-y-8 ">
                 <div className="font-bold text-3xl sm:text-5xl lg:text-6xl sm:max-w-xl
                                 max-w-xs text-black dark:text-white bg-secondary/60 p-4 rounded-lg">
-                Featured Products
+                CPO's secret Database
                 <Button size='lg' className="w-full py-6 text-xl">
                   <ShoppingBag className="mr-2" />
-                  Shop now
+                  confidential
                 </Button>
                 </div>
                 

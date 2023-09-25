@@ -13,15 +13,15 @@ export default function Header() {
     const routes= [
         {
           href: "/",
-          label: "Products",
+          label: "Clients",
         },
         {
           href: "/",
-          label: "Categories",
+          label: "ASBs by ward",
         },
         {
           href: "/",
-          label: "On Sale",
+          label: "CPN list",
         },
       ]
     return (
@@ -51,7 +51,7 @@ export default function Header() {
                         </SheetContent>
             </Sheet>
           <Link href="/" className="ml-4 lg:ml-0">
-              <h1 className="text-xl font-bold">MockAPI</h1>
+              <h1 className="text-xl font-bold">CPO's API</h1>
           </Link>
             </div>
             <nav className="mx-6 flex items-center spaxe-x-4 lg:space-x-6 hidden md:block">
